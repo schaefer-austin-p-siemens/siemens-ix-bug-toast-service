@@ -1,5 +1,6 @@
 import {
-  Component, inject
+  Component,
+  inject
 } from '@angular/core';
 import {
   IxButton,
@@ -19,5 +20,9 @@ export class AppComponent {
   private readonly toastService = inject(ToastService);
 
   createToast() {
+    this.toastService.show({
+      message: 'There is no bug in Ba Sing Se.',
+      type: 'success',
+    });
   }
 }
